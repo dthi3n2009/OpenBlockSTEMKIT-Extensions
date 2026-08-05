@@ -5,7 +5,7 @@ const meo_block = formatMessage => ({
     }),
     extensionId: 'meo_block',
     version: '1.0.0',
-    supportDevice: ['arduinoEsp32', 'arduinoEsp32C3', 'thingBot_esp32C3', 'thingBot_arduinoEsp32C3'],
+    supportDevice: ['arduinoEsp32', 'arduinoEsp32C3'],
     author: 'undo1111hp',
     iconURL: `assets/meo-block.png`,
     description: formatMessage({

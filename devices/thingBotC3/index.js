@@ -26,6 +26,9 @@ const thingBot = formatMessage => ({
     defaultProgramMode: 'upload',
     programLanguage: ['block', 'c', 'cpp'],
     tags: ['kit'],
+    // Nhãn riêng của bộ Dế Base KIT: chỉ linh kiện có trong hộp mới hiện ở kho khối lệnh.
+    // Phải đặt ở CẢ hai biến thể thiết bị, vì giao diện lọc theo biến thể đang chọn.
+    deviceExtensionsCompatible: 'deBaseKit',
     helpLink: 'https://github.com/makerviet/cobot-arduino'
 });
 
@@ -34,8 +37,12 @@ const thingBotArduino = formatMessage => {
     device.defaultBaudRate = '115200';
     device.deviceId = 'thingBot_arduinoEsp32C3';
     device.programMode = ['realtime', 'upload'];
-    device.deviceExtensions = ['arduinoThingBotC3', 'ps2'];
-    device.deviceExtensionsCompatible = 'arduinoEsp32';
+    device.deviceExtensions = ['arduinoThingBotC3'];
+    // Nhãn riêng của bộ Dế Base KIT.
+    // Trước đây để 'arduinoEsp32' nên MỌI khối lệnh dành cho ESP32 đều lọt vào kho
+    // (RFID, cảm biến nhịp tim, sóng radio...), làm học sinh rối.
+    // Đổi sang nhãn riêng thì chỉ linh kiện có trong kit mới hiện ra.
+    device.deviceExtensionsCompatible = 'deBaseKit';
     device.hide = true;
     return device;
 };
