@@ -22,6 +22,10 @@ function getInterfaceTranslations () {
         "zh-tw": {
             "coBotC3.name": "Cobot v1",
             "coBotC3.description": "Cobot is an educational robot product of ThingEdu Joint Stock Company."
+        },
+        "vi": {
+            "coBotC3.name": "Cobot v1",
+            "coBotC3.description": "Robot giáo dục Cobot của Công ty Cổ phần ThingEdu."
         }
     }
     ;

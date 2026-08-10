@@ -6,7 +6,7 @@
 /* eslint-disable dot-notation */
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
-    return {
+    const translations = {
         "en": {
             "dht.name": "DHT Sensor",
             "dht.description": "DHT Temperature and humidity sensor module."
@@ -24,6 +24,11 @@ function getInterfaceTranslations () {
             "dht.description": "DHT 溫濕度傳感器模塊。"
         }
     };
+    translations.vi = {
+        "dht.name": "Cảm biến nhiệt độ và độ ẩm DHT",
+        "dht.description": "Đo nhiệt độ và độ ẩm không khí bằng cảm biến DHT."
+    };
+    return translations;
 }
 
 function registerScratchExtensionTranslations () {
@@ -64,6 +69,18 @@ function registerBlocksMessages (Blockly) {
             "DHT_INIT": "初始化 dht %1 管腳 %2 型號 %3",
             "DHT_READ_HUMIDITY": "dht %1 讀取濕度",
             "DHT_READ_TEMPERATURE": "dht %1 讀取溫度 %2"
+        }
+    );
+
+    if (!Blockly.ScratchMsgs.locales["vi"]) {
+        Blockly.ScratchMsgs.locales["vi"] = {};
+    }
+    Object.assign(Blockly.ScratchMsgs.locales["vi"],
+        {
+            "DHT_CATEGORY": "Nhiệt độ và độ ẩm DHT",
+            "DHT_INIT": "khởi động DHT %1 ở chân %2 loại %3",
+            "DHT_READ_HUMIDITY": "DHT %1 đọc độ ẩm không khí",
+            "DHT_READ_TEMPERATURE": "DHT %1 đọc nhiệt độ theo %2"
         }
     );
 

@@ -6,7 +6,7 @@
 /* eslint-disable dot-notation */
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
-    return {
+    const translations = {
         "en": {
             "oled.description": "I2C oled display based on SSD1306 drivers."
         },
@@ -20,6 +20,10 @@ function getInterfaceTranslations () {
             "oled.description": "基於 SSD1306 驅動的 I2C oled 顯示屏。"
         }
     };
+    translations.vi = {
+        "oled.description": "Màn hình OLED I2C dùng chip điều khiển SSD1306."
+    };
+    return translations;
 }
 
 function registerScratchExtensionTranslations () {
@@ -152,6 +156,41 @@ function registerBlocksMessages (Blockly) {
             "OLED_SETTEXT": "設置 oled 字體大小 %1 顏色 %2 背景色 color %3",
             "OLED_STARTSCROLL": "oled 開始滾動 %1 y0: %2 y1: %3",
             "OLED_STOPSCROLL": "oled 停止滾動"
+        }
+    );
+
+    if (!Blockly.ScratchMsgs.locales["vi"]) {
+        Blockly.ScratchMsgs.locales["vi"] = {};
+    }
+    Object.assign(Blockly.ScratchMsgs.locales["vi"],
+        {
+            "OLED_CATEGORY": "Màn hình OLED",
+            "OLED_CLEAR": "xóa màn hình OLED",
+            "OLED_COLOR_BLACK": "đen",
+            "OLED_COLOR_INVERSE": "đảo màu",
+            "OLED_COLOR_WHITE": "trắng",
+            "OLED_DRAWCIRCLE": "OLED vẽ đường tròn tâm x: %1 y: %2 bán kính %3 màu %4",
+            "OLED_DRAWLINE": "OLED vẽ đường từ x0: %1 y0: %2 đến x1: %3 y1: %4 màu %5",
+            "OLED_DRAWRECT": "OLED vẽ hình chữ nhật x: %1 y: %2 rộng %3 cao %4 màu %5",
+            "OLED_DRAWROUNDRECT": "OLED vẽ chữ nhật bo góc x: %1 y: %2 rộng %3 cao %4 bán kính %5 màu %6",
+            "OLED_DRAWTRIANGLE": "OLED vẽ tam giác (%1, %2), (%3, %4), (%5, %6) màu %7",
+            "OLED_EOL_NOWARP": "không xuống dòng",
+            "OLED_EOL_WARP": "xuống dòng",
+            "OLED_FILLCIRCLE": "OLED tô hình tròn tâm x: %1 y: %2 bán kính %3 màu %4",
+            "OLED_FILLRECT": "OLED tô hình chữ nhật x: %1 y: %2 rộng %3 cao %4 màu %5",
+            "OLED_FILLROUNDRECT": "OLED tô chữ nhật bo góc x: %1 y: %2 rộng %3 cao %4 bán kính %5 màu %6",
+            "OLED_FILLTRIANGLE": "OLED tô tam giác (%1, %2), (%3, %4), (%5, %6) màu %7",
+            "OLED_INIT": "khởi động OLED rộng %1 cao %2 địa chỉ I2C %3",
+            "OLED_PRINT": "OLED hiện %1 %2",
+            "OLED_REFRESH": "cập nhật màn hình OLED",
+            "OLED_SCROLL_DIAGLEFT": "chéo trái",
+            "OLED_SCROLL_DIAGRIGHT": "chéo phải",
+            "OLED_SCROLL_LEFT": "sang trái",
+            "OLED_SCROLL_RIGHT": "sang phải",
+            "OLED_SETCURSOR": "đặt con trỏ OLED tại x: %1 y: %2",
+            "OLED_SETTEXT": "đặt chữ OLED cỡ %1 màu %2 nền %3",
+            "OLED_STARTSCROLL": "OLED bắt đầu cuộn %1 từ y0: %2 đến y1: %3",
+            "OLED_STOPSCROLL": "OLED dừng cuộn"
         }
     );
 

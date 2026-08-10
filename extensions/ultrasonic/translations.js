@@ -6,7 +6,7 @@
 /* eslint-disable dot-notation */
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
-    return {
+    const translations = {
         "en": {
             "ultrasonic.name": "Ultrasonic",
             "ultrasonic.description": "Standard ultrasonic distance measurement module."
@@ -24,6 +24,11 @@ function getInterfaceTranslations () {
             "ultrasonic.description": "標準的超聲波測距傳感器模塊。"
         }
     };
+    translations.vi = {
+        "ultrasonic.name": "Cảm biến siêu âm",
+        "ultrasonic.description": "Đo khoảng cách bằng sóng siêu âm."
+    };
+    return translations;
 }
 
 function registerScratchExtensionTranslations () {
@@ -56,6 +61,16 @@ function registerBlocksMessages (Blockly) {
         {
             "ULTRASONIC_CATEGORY": "超聲波",
             "ULTRASONIC_READ_DISTANCE": "超聲波傳感器管腳 TRIG %1 ECHO %2 讀取距離 %3"
+        }
+    );
+
+    if (!Blockly.ScratchMsgs.locales["vi"]) {
+        Blockly.ScratchMsgs.locales["vi"] = {};
+    }
+    Object.assign(Blockly.ScratchMsgs.locales["vi"],
+        {
+            "ULTRASONIC_CATEGORY": "Cảm biến siêu âm",
+            "ULTRASONIC_READ_DISTANCE": "đo khoảng cách bằng siêu âm, chân TRIG %1 ECHO %2, đơn vị %3"
         }
     );
 

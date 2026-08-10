@@ -6,7 +6,7 @@
 /* eslint-disable dot-notation */
 /* eslint-disable max-len */
 function getInterfaceTranslations () {
-    return {
+    const translations = {
         "en": {
             "passiveBuzzer.name": "Passive Buzzer",
             "passiveBuzzer.description": "Unlike the active buzzer, the passive buzzer can be used to make different tones of sound and play some ringtones."
@@ -24,6 +24,11 @@ function getInterfaceTranslations () {
             "passiveBuzzer.description": "不同於有源蜂鳴器，無源蜂鳴器可以用來播放不同音調的聲音和播放鈴聲。"
         }
     };
+    translations.vi = {
+        "passiveBuzzer.name": "Còi thụ động",
+        "passiveBuzzer.description": "Phát nhiều cao độ và giai điệu khác nhau bằng còi thụ động."
+    };
+    return translations;
 }
 
 function registerScratchExtensionTranslations () {
@@ -144,6 +149,38 @@ function registerBlocksMessages (Blockly) {
             "PASSIVEBUZZER_SLEEPING": "正在睡覺",
             "PASSIVEBUZZER_SUPERHAPPY": "非常開心",
             "PASSIVEBUZZER_SURPRISE": "驚訝"
+        }
+    );
+
+    if (!Blockly.ScratchMsgs.locales["vi"]) {
+        Blockly.ScratchMsgs.locales["vi"] = {};
+    }
+    Object.assign(Blockly.ScratchMsgs.locales["vi"],
+        {
+            "PASSIVEBUZZER_CATEGORY": "Còi thụ động",
+            "PASSIVEBUZZER_CONFUSED": "bối rối",
+            "PASSIVEBUZZER_CONNECTION": "kết nối",
+            "PASSIVEBUZZER_CUDDLY": "dễ thương",
+            "PASSIVEBUZZER_DIDI": "nhấn nút",
+            "PASSIVEBUZZER_DISCONNECTION": "ngắt kết nối",
+            "PASSIVEBUZZER_FART1": "hiệu ứng 1",
+            "PASSIVEBUZZER_FART2": "hiệu ứng 2",
+            "PASSIVEBUZZER_FART3": "hiệu ứng 3",
+            "PASSIVEBUZZER_HAPPY": "vui vẻ",
+            "PASSIVEBUZZER_HAPPYSHORT": "vui ngắn",
+            "PASSIVEBUZZER_INIT": "khởi động còi thụ động ở chân %1",
+            "PASSIVEBUZZER_MODE1": "chế độ 1",
+            "PASSIVEBUZZER_MODE2": "chế độ 2",
+            "PASSIVEBUZZER_MODE3": "chế độ 3",
+            "PASSIVEBUZZER_OHOOH": "ồ",
+            "PASSIVEBUZZER_OHOOH2": "ồ 2",
+            "PASSIVEBUZZER_PLAYRINGTONE": "phát giai điệu %1",
+            "PASSIVEBUZZER_PLAYTONEFORBEAT": "phát nốt %1 trong %2 nhịp",
+            "PASSIVEBUZZER_SAD": "buồn",
+            "PASSIVEBUZZER_SETTEMPO": "đặt nhịp độ (bpm) %1",
+            "PASSIVEBUZZER_SLEEPING": "đang ngủ",
+            "PASSIVEBUZZER_SUPERHAPPY": "rất vui",
+            "PASSIVEBUZZER_SURPRISE": "bất ngờ"
         }
     );
 

@@ -22,6 +22,10 @@ function getInterfaceTranslations () {
         "zh-tw": {
             "viaBanhMi.name": "VIA - BanhMi",
             "viaBanhMi.description": "A robot kit for learning programming and electronics, IoT compatible. Promote student research and development capabilities."
+        },
+        "vi": {
+            "viaBanhMi.name": "VIA - BanhMi",
+            "viaBanhMi.description": "Bộ robot học lập trình, điện tử và IoT, giúp học sinh phát triển năng lực nghiên cứu sáng tạo."
         }
     }
     ;

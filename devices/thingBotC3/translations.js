@@ -22,6 +22,10 @@ function getInterfaceTranslations () {
         "zh-tw": {
             "thingbot.name": "ThingBot",
             "thingbot.description": "ThingBot by ThingEdu"
+        },
+        "vi": {
+            "thingbot.name": "ThingBot",
+            "thingbot.description": "Bộ robot giáo dục ThingBot của ThingEdu."
         }
     }
     ;

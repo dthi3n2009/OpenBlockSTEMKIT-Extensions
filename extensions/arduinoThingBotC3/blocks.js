@@ -34,8 +34,8 @@ function registerBlocks(Blockly) {
                         type: 'field_dropdown',
                         name: 'DIRECTION',
                         options: [
-                            ['forward', 'forward'],
-                            ['backward', 'backward'],
+                            [Blockly.ScratchMsgs.translate('THINGBOTC3_FORWARD', 'forward'), 'forward'],
+                            [Blockly.ScratchMsgs.translate('THINGBOTC3_BACKWARD', 'backward'), 'backward'],
                         ]
                     },
                     {
