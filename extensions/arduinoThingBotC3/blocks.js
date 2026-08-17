@@ -4,6 +4,7 @@ function registerBlocks(Blockly) {
     const color = '#009933';
     const actuatorColor = '#cc0000';
     const electronicColor = '#6600ff';
+    const motorPorts = [['M1', '1'], ['M2', '2'], ['M3', '3'], ['M4', '4']];
 
     Blockly.Blocks.thingBotC3_init = {
         init: function () {
@@ -23,12 +24,7 @@ function registerBlocks(Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'MOTOR',
-                        options: [
-                            ['M1', '1'],
-                            ['M2', '2'],
-                            ['M3', '3'],
-                            ['M4', '4'],
-                        ]
+                        options: motorPorts
                     },
                     {
                         type: 'field_dropdown',
@@ -61,12 +57,7 @@ function registerBlocks(Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'MOTOR',
-                        options: [
-                            ['M1', '1'],
-                            ['M2', '2'],
-                            ['M3', '3'],
-                            ['M4', '4']
-                        ]
+                        options: motorPorts
                     },
                     {
                         type: 'field_dropdown',
@@ -100,13 +91,33 @@ function registerBlocks(Blockly) {
                 args0: [{
                     type: 'field_dropdown',
                     name: 'MOTOR',
-                    options: [
-                        ['M1', '1'],
-                        ['M2', '2'],
-                        ['M3', '3'],
-                        ['M4', '4']
-                    ]
+                    options: motorPorts
                 }],
+                colour: actuatorColor,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.thingBotC3_setKitLed = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.THINGBOTC3_SET_KIT_LED,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'MOTOR',
+                        options: motorPorts
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'STATE',
+                        options: [
+                            [Blockly.ScratchMsgs.translate('THINGBOTC3_ON', 'on'), 'on'],
+                            [Blockly.ScratchMsgs.translate('THINGBOTC3_OFF', 'off'), 'off']
+                        ]
+                    }
+                ],
                 colour: actuatorColor,
                 extensions: ['shape_statement']
             });

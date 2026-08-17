@@ -31,6 +31,10 @@ function registerToolboxs() {
     <block type="thingBotC3_stopMotor" id="thingBotC3_stopMotor">
         <field name="MOTOR">1</field>
     </block>
+    <block type="thingBotC3_setKitLed" id="thingBotC3_setKitLed">
+        <field name="MOTOR">3</field>
+        <field name="STATE">on</field>
+    </block>
     <block type="thingBotC3_setServo" id="thingBotC3_setServo">
         <field name="SERVO">1</field>
         <value name="PULSE">

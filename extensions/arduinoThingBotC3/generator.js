@@ -80,6 +80,12 @@ function registerGenerators(Blockly) {
         return motorStopCode(block.getFieldValue('MOTOR'));
     };
 
+    Blockly.Arduino.thingBotC3_setKitLed = function (block) {
+        ensureThingBotRuntime();
+        const motor = block.getFieldValue('MOTOR');
+        return block.getFieldValue('STATE') === 'on' ? motorRunCode(motor, 'forward', '100') : motorStopCode(motor);
+    };
+
     Blockly.Arduino.thingBotC3_setServo = function (block) {
         ensureThingBotRuntime();
         const servo = block.getFieldValue('SERVO');
