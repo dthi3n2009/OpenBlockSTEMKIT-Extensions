@@ -12,6 +12,9 @@ const motorOutputs = formatMessage => ({
         default: 'Thử và điều khiển bơm, quạt hoặc module đèn 5V qua bất kỳ cổng M nào.'
     }),
     featured: true,
+    // Thẻ này là phần mở rộng học tập, không cần ảnh minh họa. Tránh hiển thị
+    // biểu tượng lỗi khi thư viện không có ảnh riêng.
+    hideImage: true,
     blocks: 'blocks.js',
     generator: 'generator.js',
     toolbox: 'toolbox.js',
