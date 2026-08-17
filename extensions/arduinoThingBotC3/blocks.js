@@ -53,6 +53,66 @@ function registerBlocks(Blockly) {
         }
     };
 
+    Blockly.Blocks.thingBotC3_testMotor = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.THINGBOTC3_TEST_MOTOR,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'MOTOR',
+                        options: [
+                            ['M1', '1'],
+                            ['M2', '2'],
+                            ['M3', '3'],
+                            ['M4', '4']
+                        ]
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'DIRECTION',
+                        options: [
+                            [Blockly.ScratchMsgs.translate('THINGBOTC3_FORWARD', 'forward'), 'forward'],
+                            [Blockly.ScratchMsgs.translate('THINGBOTC3_BACKWARD', 'backward'), 'backward']
+                        ]
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'SPEED',
+                        check: 'Number'
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'SECONDS',
+                        check: 'Number'
+                    }
+                ],
+                colour: actuatorColor,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.thingBotC3_stopMotor = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.THINGBOTC3_STOP_MOTOR,
+                args0: [{
+                    type: 'field_dropdown',
+                    name: 'MOTOR',
+                    options: [
+                        ['M1', '1'],
+                        ['M2', '2'],
+                        ['M3', '3'],
+                        ['M4', '4']
+                    ]
+                }],
+                colour: actuatorColor,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
     Blockly.Blocks.thingBotC3_setServo = {
         init: function () {
             this.jsonInit({

@@ -14,6 +14,23 @@ function registerToolboxs() {
             </shadow>
         </value>
     </block>
+    <block type="thingBotC3_testMotor" id="thingBotC3_testMotor">
+        <field name="MOTOR">1</field>
+        <field name="DIRECTION">forward</field>
+        <value name="SPEED">
+            <shadow type="math_number">
+                <field name="NUM">20</field>
+            </shadow>
+        </value>
+        <value name="SECONDS">
+            <shadow type="math_number">
+                <field name="NUM">2</field>
+            </shadow>
+        </value>
+    </block>
+    <block type="thingBotC3_stopMotor" id="thingBotC3_stopMotor">
+        <field name="MOTOR">1</field>
+    </block>
     <block type="thingBotC3_setServo" id="thingBotC3_setServo">
         <field name="SERVO">1</field>
         <value name="PULSE">
@@ -25,7 +42,7 @@ function registerToolboxs() {
     <block type="thingBotC3_buzzer" id="thingBotC3_buzzer">
         <value name="SOUND">
             <shadow type="math_number">
-                <field name="NUM">0</field>
+                <field name="NUM">4095</field>
             </shadow>
         </value>
     </block>
